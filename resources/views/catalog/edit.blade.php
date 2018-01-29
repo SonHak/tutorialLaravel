@@ -13,8 +13,10 @@
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
 				<form>
 					{{method_field('PUT')}}
+
 					{{-- TODO: Protección contra CSRF --}}
 					{{ csrf_field() }}
+					
 					<div class="form-group">
 						<label for="title">Modificar Película</label>
 						<input type="text" name="title" id="title" class="form-control">

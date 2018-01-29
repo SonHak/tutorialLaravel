@@ -43,9 +43,9 @@
 			<a class="btn btn-warning" href="{{url('catalog/edit/'.$id)}}">
 				Editar película
 			</a>
-			<button class="btn btn-default" onclick="window.history.back()">
+			<a class="btn btn-secondary" href="{{url('catalog/')}}">
 				Volver al catálogo
-			</button>
+			</a>
 		</span>
 		
 	</div>
