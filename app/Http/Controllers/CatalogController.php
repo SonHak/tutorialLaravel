@@ -16,7 +16,8 @@ class CatalogController extends Controller
 	}
 
 	public function getShow($id){
-		return view('catalog.show')->with("peli",$this->arrayPeliculas[$id])->with("id",$id);
+		$arrayPeliculas = Movie::findOrFail($id);
+		return view('catalog.show')->with("peli",$arrayPeliculas);
 	}
 
 	public function getCreate(){
@@ -24,7 +25,8 @@ class CatalogController extends Controller
 	}
 
 	public function getEdit($id){
-		return view('catalog.edit',array('id'=>$id));
+		$arrayPeliculas = Movie::findOrFail($id);
+		return view('catalog.edit')->with("peli",$arrayPeliculas);
 	}
 
 }
